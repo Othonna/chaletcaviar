@@ -15,6 +15,8 @@ function chaletcaviar_register_assets () {
 function chaletcaviar_supports () {
   add_theme_support('title-tag');
   add_theme_support( 'post-thumbnails' );
+  add_theme_support('menus');
+  register_nav_menu('header', 'En tête du menu');
 }
 function chaletcaviar_document_title_parts ($title) {
   //var_dump($title); die();
@@ -23,7 +25,22 @@ function chaletcaviar_document_title_parts ($title) {
 }
 
 
+function chaletcaviar_menu_class(array $classes): array 
+{
+  /* var_dump(func_get_args());
+  die(); */
+  $classes[] = 'nav-item';
+  return $classes;
+}
+function chaletcaviar_menu_link_class($attrs)
+{
+  $attrs['class'] = 'nav-link';
+  return $attrs;
+}
+
 add_action('wp_enqueue_scripts', 'chaletcaviar_register_assets');
 add_action('wp_enqueue_scripts', 'load_scripts');
 add_action('after_setup_theme', 'chaletcaviar_supports');
 add_filter('document_title_parts', 'chaletcaviar_document_title_parts');
+add_filter('nav_menu_css_class', 'chaletcaviar_menu_class');
+add_filter('nav_menu_link_attributes', 'chaletcaviar_menu_link_class');
