@@ -1,0 +1,8 @@
+{
+    "require": {
+        "symfony/web-profiler-bundle": "^5.4"
+    },
+    "require-dev": {
+        "symfony/profiler-pack": "^1.0"
+    }
+}

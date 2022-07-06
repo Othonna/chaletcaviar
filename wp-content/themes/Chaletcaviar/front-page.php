@@ -1,11 +1,28 @@
 <?php get_header() ?>
-    <?php while(have_posts()): the_post() ?>
-        <h1><?php the_title() ?></h1>
-        <?php the_content()?>
+<div class="container">
+    <div class="row">
+        <?php 
+            $homepageEvents = new WP_Query(array(
+                'posts_per_page' => 2,
+                'post_type' => 'locations'
+            ));
 
-        <a href="<?= get_post_type_archive_link('post') ?>">A louer</a>
+            while($homepageEvents->have_posts()) {
+            $homepageEvents->the_post(); ?>
 
-    <?php endwhile?>
+        <div class="col-sm-4">
+            <div class="card" style="width: 21rem;">
+            <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'alt' => '', 'style' => 'height: auto']) ?>
+                <img src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title"><?php the_title() ?></h5>
+                    <p class="card-text"><?php the_content() ?></p>
+                    <a href="<?php the_permalink() ?>" class="card-link">Voir plus</a>
+                </div>
+            </div>
+        </div>
+        <?php }
+        ?>
+    </div>  
+</div>
 <?php get_footer() ?>
-
-
