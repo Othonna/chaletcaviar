@@ -6,7 +6,7 @@
                 'posts_per_page' => 2,
                 'post_type' => 'locations'
             ));
-
+            var_dump($homepageEvents);
             while($homepageEvents->have_posts()) {
             $homepageEvents->the_post(); ?>
 

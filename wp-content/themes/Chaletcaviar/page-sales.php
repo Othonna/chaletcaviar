@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Example Template */
+
 get_header() ?>
 
 <div class="container">

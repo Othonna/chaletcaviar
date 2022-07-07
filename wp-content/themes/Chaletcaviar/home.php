@@ -1,17 +1,15 @@
-<?php 
-/* Template Name: Example Template */
-get_header() ?>
-
+<?php get_header() ?>
 <div class="container">
     <div class="row">
         <?php 
-            $salepageEvents = new WP_Query(array(
-                'post_type' => 'sales'
+            $homepageEvents = new WP_Query(array(
+                'posts_per_page' => 2,
+                'post_type' => 'locations'
             ));
-            var_dump($salepageEvents);
+            var_dump($homepageEvents);
 
-            while($salepageEvents->have_posts()) {
-                $salepageEvents->the_post(); ?>
+            while($homepageEvents->have_posts()) {
+            $homepageEvents->the_post(); ?>
 
         <div class="col-sm-4">
             <div class="card" style="width: 21rem;">
@@ -28,7 +26,4 @@ get_header() ?>
         ?>
     </div>  
 </div>
-
 <?php get_footer() ?>
-
-
