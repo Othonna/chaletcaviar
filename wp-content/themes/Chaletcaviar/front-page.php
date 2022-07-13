@@ -1,28 +1,15 @@
 <?php get_header() ?>
 <div class="container">
-    <div class="row">
-        <?php 
-            $homepageEvents = new WP_Query(array(
-                'posts_per_page' => 2,
-                'post_type' => 'locations'
-            ));
-            var_dump($homepageEvents);
-            while($homepageEvents->have_posts()) {
-            $homepageEvents->the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+              <h1><?php the_title() ?></h1> 
 
-        <div class="col-sm-4">
-            <div class="card" style="width: 21rem;">
-            <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'alt' => '', 'style' => 'height: auto']) ?>
-                <img src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title"><?php the_title() ?></h5>
-                    <p class="card-text"><?php the_content() ?></p>
-                    <a href="<?php the_permalink() ?>" class="card-link">Voir plus</a>
-                </div>
-            </div>
-        </div>
-        <?php }
-        ?>
-    </div>  
-</div>
+              <?php if(get_post_meta(get_the_ID(), 'chaletcaviar_sponso', true) === '1'): ?>
+                <div class="alert alert-info">Article sponso</div>
+              <?php endif ?>
+              <p>
+                  <img src="<?php the_post_thumbnail_url(); ?>" alt="" style="width:100%; height:auto;">
+              </p>
+              <?php the_content() ?>
+      <?php endwhile; endif; ?>
+  </div>
 <?php get_footer() ?>

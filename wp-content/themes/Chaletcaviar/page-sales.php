@@ -1,15 +1,14 @@
 <?php 
-
+/* Template Name: Sales Template */
 get_header() ?>
 
 <div class="container">
     <div class="row">
         <?php 
             $salepageEvents = new WP_Query(array(
-                'post_type' => 'sales'
+                'post_type' => 'sale'
             ));
-            var_dump($salepageEvents);
-
+            //var_dump($salepageEvents);
             while($salepageEvents->have_posts()) {
                 $salepageEvents->the_post(); ?>
 

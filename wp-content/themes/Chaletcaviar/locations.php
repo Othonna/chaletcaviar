@@ -1,12 +1,11 @@
-<?php get_header() ?>
+<?php get_header() /* Template Name: Locations Template */?>
 <div class="container">
     <div class="row">
         <?php 
             $locationpageEvents = new WP_Query(array(
-                'posts_per_page' => 2,
-                'post_type' => 'locations'
+                'post_type' => 'location'
             ));
-
+            var_dump($locationpageEvents);
             while($locationpageEvents->have_posts()) {
                 $locationpageEvents->the_post(); ?>
 
@@ -26,4 +25,3 @@
     </div>  
 </div>
 <?php get_footer() ?>
-

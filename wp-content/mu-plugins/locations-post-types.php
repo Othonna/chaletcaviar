@@ -1,6 +1,6 @@
 <?php 
     function locations_post_types() {
-        register_post_type('locations', array(
+        register_post_type('location', array(
         'has_archive' => true,
         'public' => true,
         'labels' => array(

@@ -1,17 +1,14 @@
-<?php 
-/* Template Name: Example Template */
-get_header() ?>
+<?php get_header() /* Template Name: Locations Template */?>
 
 <div class="container">
     <div class="row">
         <?php 
-            $salepageEvents = new WP_Query(array(
-                'post_type' => 'sales'
+            $locationpageEvents = new WP_Query(array(
+                'post_type' => 'location'
             ));
-            var_dump($salepageEvents);
-
-            while($salepageEvents->have_posts()) {
-                $salepageEvents->the_post(); ?>
+            //var_dump($locationpageEvents);
+            while($locationpageEvents->have_posts()) {
+                $locationpageEvents->the_post(); ?>
 
         <div class="col-sm-4">
             <div class="card" style="width: 21rem;">
@@ -28,7 +25,5 @@ get_header() ?>
         ?>
     </div>  
 </div>
-
 <?php get_footer() ?>
-
 
