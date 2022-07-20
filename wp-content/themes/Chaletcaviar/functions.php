@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
 
 function load_scripts() {
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0', 'all');
@@ -15,6 +17,14 @@ function chaletcaviar_supports () {
   add_theme_support('title-tag');
   add_theme_support( 'post-thumbnails' );
   add_theme_support('menus');
+  add_theme_support('custom-background');
+  add_theme_support('custom-logo', [
+    'header-text' => ['site-title', 'site-description'],
+    'height' => 100,
+    'width' => 400,
+    'flex-height' => true,
+    'flex-width' => true,
+  ] );
   register_nav_menu('header', 'En tête du menu');
 }
 function chaletcaviar_document_title_parts ($title) {
@@ -58,6 +68,23 @@ function chaletcaviar_save_sponso($post_id) {
   }
 }
 
+
+
+/* function custom_mailer(PHPMailer $phpmailer) 
+{
+  $phpmailer->SetFrom('chalet-caviar@othonnarecords.com', 'Chalet Caviar');
+  $phpmailer->Host = 'chalet-caviar@othonnarecords.com';
+  $phpmailer->Port = 587;
+  $phpmailer->SMTPAuth = true;
+  $phpmailer->SMTPSecure = 'tls';
+  $phpmailer->Username = SMTP_username;
+  $phpmailer->Password = SMTP_password;
+  $phpmailer->isSMTP();
+}
+add_action('phpmailer_init', 'custom_mailer'); */
+
+
+
 add_action('wp_enqueue_scripts', 'chaletcaviar_register_assets');
 add_action('wp_enqueue_scripts', 'load_scripts');
 add_action('after_setup_theme', 'chaletcaviar_supports');
@@ -68,5 +95,4 @@ add_filter('nav_menu_link_attributes', 'chaletcaviar_menu_link_class');
 
 add_action('add_meta_boxes', 'chaletcaviar_add_custon_box');
 add_action('save_post', 'chaletcaviar_save_sponso');
-
 

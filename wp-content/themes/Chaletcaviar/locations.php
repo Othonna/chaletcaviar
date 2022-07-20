@@ -3,9 +3,9 @@
     <div class="row">
         <?php 
             $locationpageEvents = new WP_Query(array(
-                'post_type' => 'location'
+                'post_type' => 'locations'
             ));
-            var_dump($locationpageEvents);
+            //var_dump($locationpageEvents);
             while($locationpageEvents->have_posts()) {
                 $locationpageEvents->the_post(); ?>
 
