@@ -1,7 +1,7 @@
 <?php
  /* 
- $name = $_POST['name'];
- $message = $_POST['inputmessage'];
+ $usernamename = $_POST['username'];
+ $message = $_POST['message'];
  $to = "chalet-caviar@othonnarecords.com";
  $headers = "Content-type: text/html; charset=UTF-8\r\n";
  $headers .= $_POST ['email'];
@@ -17,32 +17,43 @@ echo '</pre>'; */
 
 
 $errors = [];
-if(!array_key_exists('username', $_POST) | $_POST['username'] == '')
+if(!array_key_exists('firstname', $_POST) || $_POST['firstname'] == '')
  {
-    $errors['username'] = "vous n'avez pas rensigner votre nom";
+    $errors['firstname'] = "vous n'avez pas renseignez votre Nom";
  }
- if(!array_key_exists('email', $_POST) | $_POST['email'] == '' )
+ if(!array_key_exists('lastname', $_POST) || $_POST['lastname'] == '')
+ {
+    $errors['lastname'] = "vous n'avez pas renseignez votre Prénom";
+ }
+ if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
  {
     $errors['email'] = "vous n'avez pas renseignez votre email";
  }
- if(!array_key_exists('message', $_POST) | $_POST['message'] == '')
+ if(!array_key_exists('message', $_POST) || $_POST['message'] == '')
  {
-    $errors['message'] = "vous n'avez pas renseignez votre email";
+    $errors['message'] = "vous n'avez pas renseignez votre message";
  }
- echo '<pre>';
+
+/*  echo '<pre>';
     var_dump($errors);
     die();
-echo '</pre>';
+    echo '</pre>';  */
+
+session_start();
 
 if(!empty($errors))
  {
-    header('Location: /contact.php/');
+    $_SESSION['errors'] = $errors;
+    $_SESSION['inputs'] = $_POST;
+    header('Location: /contact/');
  } 
  else 
  {
-    $message = $_POST['inputmessage'];
+    $_SESSION['success'] = 1;
+    $message = $_POST['message'];
     $headers = 'FROM: site@local.dev';
     mail('janick.deneux@gmail.com', 'Formulaire de contact', $message, $headers);
+    header('Location: /contact/');
  }
 
 

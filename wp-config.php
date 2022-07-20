@@ -36,11 +36,6 @@
 
  */
 
- // SMTP email settings
-define( 'SMTP_username', 'chalet-caviar@othonnarecords.com' );  // username of host like Gmail
-define( 'SMTP_password', '*2yQr@XF49w=' );   // password for login into the App
-
-
 
 // ** Database settings - You can get this info from your web host ** //
 
