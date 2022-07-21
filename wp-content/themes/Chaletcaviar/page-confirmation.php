@@ -17,6 +17,7 @@ echo '</pre>'; */
 
 
 $errors = [];
+
 if(!array_key_exists('firstname', $_POST) || $_POST['firstname'] == '')
  {
     $errors['firstname'] = "vous n'avez pas renseignez votre Nom";
