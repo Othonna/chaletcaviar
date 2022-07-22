@@ -1,3 +1,4 @@
+<?php include_once ('inc.php')?>
 <?php session_start(); ?>
 <?php get_header(); /* Template Name: Contact Page */ ?>
 
@@ -24,13 +25,11 @@
                     <div class = "container">
                          <!-- Ne pas mettre le préfixe page , ni de mot interdit comme contact dans l'url action -->
                         <form action="/confirmation/" method="POST">
+                            <?php $form = new Form();?>
                             <div class="controls">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="form_name">Nom *</label>
-                                            <input required="required" id="form_name" type="text" name="firstname" class="form-control" placeholder="SVP entrez votre Nom *" value="<?= isset($_SESSION['inputs']['username']) ? $_SESSION['inputs']['username'] : ''; ?>">
-                                        </div>
+                                       <?= $form->text('firstname', 'Nom *'); ?>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -72,8 +71,7 @@
                                 </div>
                             </div>
                         </form>
-                        <h2>Debug :</h2>
-                        <?= var_dump($_SESSION); ?>
+                    
                     </div>
                 </div>
             </div>
