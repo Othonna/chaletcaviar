@@ -34,10 +34,7 @@
                                        <?= $form->text('firstname', 'Nom *'); ?>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="form_lastname">Prénom *</label>
-                                            <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="SVP entrez votre Prénom *" value="<?= isset($_SESSION['inputs']['lastname']) ? $_SESSION['inputs']['lastname'] : ''; ?>">
-                                        </div>
+                                       <?= $form->text('lastname', 'Prénom *'); ?>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -58,10 +55,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="form_message">Message *</label>
-                                            <textarea  name="message" id="form_message" class="form-control text-form" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
+                                         <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="form_message">Message *</label>
+                                                <textarea name="message" id="form_message" class="form-control text-form" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
                                             </div>
                                         </div>
                                     <div class="col-md-12">
