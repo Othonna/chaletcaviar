@@ -2,19 +2,19 @@
     
 class Form {
 
-    public function text($firstname, $label) {
+    private function input($type, $name, $label) {
        return 
        "<div class=\"form-group\">
-            <label for=\"form_name\">Nom *</label>
-            <input id=\"form_name\" type=\"text\" name=\"firstname\" class=\"form-control\" placeholder=\"SVP entrez votre Nom *\" value=\"\">
+            <label for=\"form_$name\">$label</label>
+            <input id=\"form_$name\" type=\"$type\" name=\"$name\" class=\"form-control\" placeholder=\"SVP entrez votre Nom *\" value=\"\">
         </div>";
     }
 
+    public function text($firstname, $label) {
+       return $this->input('text', $name, $label);
+    }
+
     public function email($email, $label) {
-        return 
-        "<div class=\"form-group\">
-             <label for=\"form_email\">Email *</label>
-             <input id=\"form_email\" type=\"text\" name=\"email\" class=\"form-control\" placeholder=\"SVP entrez votre Email *\" value=\"\">
-         </div>";
+        return $this->input('email', $name, $label);
      }
-}
+} 
