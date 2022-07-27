@@ -1,20 +1,9 @@
-<?php
- /* 
- $usernamename = $_POST['username'];
- $message = $_POST['message'];
- $to = "chalet-caviar@othonnarecords.com";
- $headers = "Content-type: text/html; charset=UTF-8\r\n";
- $headers .= $_POST ['email'];
- */
- ?>
-
  <?php
 //echo 'page-post-contact.php';
 
 /* echo '<pre>';
     var_dump($_POST);
 echo '</pre>'; */
-
 
 $errors = [];
 

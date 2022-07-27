@@ -2,6 +2,8 @@
 <?php session_start(); ?>
 <?php get_header(); /* Template Name: Contact Page */ ?>
 
+<?php get_header(); /* Template Name: Contact Page */ ?>
+
  <div class="container">
         <?php if(array_key_exists('errors', $_SESSION)): ?> 
               <div class="alert alert-danger">
@@ -34,21 +36,18 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_lastname">Prénom *</label>
-                                            <input required="required" id="form_lastname" type="text" name="lastname" class="form-control" placeholder="SVP entrez votre Prénom *" value="<?= isset($_SESSION['inputs']['lastname']) ? $_SESSION['inputs']['lastname'] : ''; ?>">
+                                            <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="SVP entrez votre Prénom *" value="<?= isset($_SESSION['inputs']['lastname']) ? $_SESSION['inputs']['lastname'] : ''; ?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="form_email">Email *</label>
-                                            <input required="required" id="form_email" type="email" name="email" class="form-control" placeholder="SVP entrez votre Mail *" value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : ''; ?>">
-                                        </div>
+                                    <?= $form->email('email', 'Email *'); ?>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="form_service">Choissisez le service voulu *</label>
-                                            <select id="form_service" name="service" class="form-control" required="required" data-error="Please specify your need.">
+                                            <select id="form_service" name="service" class="form-control" data-error="Please specify your need.">
                                                 <option value="" selected disabled>--Selectionner votre demande--</option>
                                                 <option value="0">J'aimerai acheter</option>
                                                 <option value="1">J'aimerai réserver</option>
@@ -62,7 +61,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="form_message">Message *</label>
-                                            <textarea required="required" name="message" id="form_message" class="form-control text-form" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
+                                            <textarea  name="message" id="form_message" class="form-control text-form" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
                                             </div>
                                         </div>
                                     <div class="col-md-12">
@@ -78,46 +77,6 @@
         </div>
     </div>
 </div>  
-
-<!-- <div class="container">
-    <div class="starter-template">
-        <form action="/confirmation/" method="POST">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="username">Votre Nom</label>
-                        <input type="text" name="username" class="form-control" id="username" placeholder="exemple: Doe"
-                        value="<?= isset($_SESSION['inputs']['username']) ? $_SESSION['inputs']['username'] : ''; ?>">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="email">Votre Email</label>
-                        <input type="text" name="email" class="form-control" id="email" placeholder="exemple: monemail@gmail.com"
-                        value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : ''; ?>">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="" class="inputservice">Service</label>
-                        <select name="service" id="inputservice">
-                            <option value="">Contact</option>
-                            <option value="">Achat</option>
-                            <option value="">Location</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <div class="form-group">
-                        <label for="form_message">Votre message</label>
-                        <textarea name="message" id="form_message" class="form-control text-form" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </div>
-            </div> 
-        </form>
-    </div>
-</div> -->
 
 <?php 
 unset($_SESSION['inputs']);

@@ -69,12 +69,12 @@ function chaletcaviar_save_sponso($post_id) {
   }
 }
 
-function contact_session_start() {
+/* function contact_session_start() {
   if (!session_id()) {
     @session_start();
   }
 }
-add_action('init', 'contact_session_start', 1);
+add_action('init', 'contact_session_start', 1); */
 
 
 add_action('wp_enqueue_scripts', 'chaletcaviar_register_assets');
