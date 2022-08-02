@@ -13,6 +13,5 @@
         'menu_icon' => 'dashicons-store'
         ));
     }
-    
     add_action('init', 'locations_post_types');
  ?>

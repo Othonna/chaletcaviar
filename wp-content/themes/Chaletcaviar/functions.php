@@ -47,35 +47,12 @@ function chaletcaviar_menu_link_class($attrs)
   return $attrs;
 }
 
-function chaletcaviar_add_custon_box() {
-  add_meta_box('chaletcaviar_sponso', 'Sponsoring', 'chaletcaviar_render_sponso_box', 'post', 'side');
-}
-
-function chaletcaviar_render_sponso_box($post_id) {
-    ?>
-    <input type="hidden" value="0" name="chaletcaviar_sponso">
-    <input type="checkbox" value="1" name="chaletcaviar_sponso">
-    <label for="chaletcaviar_sponso">Article sponsorisé</label>
-    <?php
-}
-
-function chaletcaviar_save_sponso($post_id) {
-  if (array_key_exists('chaletcaviar_sponso', $_POST) && current_user_can( 'edit_post', $post_id )) {
-      if ($_POST['chaletcaviar_sponso'] === '0') {
-        delete_post_meta($post_id, 'chaletcaviar_sponso');
-      } else {
-          update_post_meta($post_id, 'chaletcaviar_sponso',1);
-      }
-  }
-}
-
 /* function contact_session_start() {
   if (!session_id()) {
     @session_start();
   }
 }
 add_action('init', 'contact_session_start', 1); */
-
 
 add_action('wp_enqueue_scripts', 'chaletcaviar_register_assets');
 add_action('wp_enqueue_scripts', 'load_scripts');
@@ -85,6 +62,9 @@ add_filter('document_title_parts', 'chaletcaviar_document_title_parts');
 add_filter('nav_menu_css_class', 'chaletcaviar_menu_class');
 add_filter('nav_menu_link_attributes', 'chaletcaviar_menu_link_class');
 
-add_action('add_meta_boxes', 'chaletcaviar_add_custon_box');
-add_action('save_post', 'chaletcaviar_save_sponso');
 
+/*
+* Metaboxes link to folder metaboxes
+*/
+require_once('metaboxes/sponso.php');
+SponsoMetaBox::register(); 
