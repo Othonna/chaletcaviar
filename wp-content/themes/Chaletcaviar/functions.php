@@ -1,4 +1,5 @@
 <?php
+require dirname(__DIR__, 3) . '/vendor/autoload.php';
 
 function load_scripts() {
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0', 'all');

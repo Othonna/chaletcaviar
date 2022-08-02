@@ -1,5 +1,6 @@
 <?php get_header() ?>
   <div class="container">
+
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <h1><?php the_title() ?></h1> 
               <?php if(get_post_meta(get_the_ID(), 'chaletcaviar_sponso', true) === 1): ?>
