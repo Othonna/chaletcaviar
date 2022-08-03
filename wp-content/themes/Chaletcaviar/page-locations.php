@@ -5,12 +5,12 @@
             $locationpageEvents = new WP_Query(array(
                 'post_type' => 'location'
             ));
-            dump($locationpageEvents);
+            //dump($locationpageEvents);
             while($locationpageEvents->have_posts()) {
                     $locationpageEvents->the_post(); ?>
 
                 <div class="col-sm-4">
-                    <?php echo get_the_ID()?>
+                    <?php //echo get_the_ID()?>
                     <div class="card" style="width: 21rem;">
                     <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'alt' => '', 'style' => 'height: auto']) ?>
                         <img src="" class="card-img-top" alt="">
