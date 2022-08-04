@@ -67,5 +67,5 @@ add_filter('nav_menu_link_attributes', 'chaletcaviar_menu_link_class');
 /*
 * Metaboxes link to folder metaboxes
 */
-require_once('metaboxes/sponso.php');
-SponsoMetaBox::register(); 
+require_once('metaboxes/metaboxes.php');
+MetaBoxes::register(); 
