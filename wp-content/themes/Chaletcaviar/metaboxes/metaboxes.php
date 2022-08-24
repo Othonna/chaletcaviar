@@ -80,7 +80,6 @@
                 'side'                          
             );
         }
-    
     }
 
     public static function render_price($post) {
@@ -90,21 +89,21 @@
         */
         get_post_meta( $post->ID, self::META_PRICE, true );
         ?>
-            <input type="text" id="textRangeInput" value="400" name="<?= self:: META_PRICE ?>">
-            <span>€</span>
-            <div class="container">
-                <input type="range" min="0" max="3000" value="400" step="1" name="a" list="tickmarks" id="rangeInput" onchange="updateTextInput(this.value);">
-                    <datalist id="tickmarks">
-                        <option value="0 to 3000">0</option>
-                        <option>200</option>
-                        <option>400</option>
-                        <option>600</option>
-                        <option>800</option>
-                        <option>1000</option>
-                        <option>2000</option>
-                        <option>3000</option>
-                    </datalist>    
-            </div>
+        <input type="text" id="textRangeInput" value="400" name="<?= self:: META_PRICE ?>">
+        <span>€</span>
+        <div class="container">
+            <input type="range" min="0" max="3000" value="400" step="1" name="a" list="tickmarks" id="rangeInput" onchange="updateTextInput(this.value);">
+                <datalist id="tickmarks">
+                    <option value="0 to 3000">0</option>
+                    <option>200</option>
+                    <option>400</option>
+                    <option>600</option>
+                    <option>800</option>
+                    <option>1000</option>
+                    <option>2000</option>
+                    <option>3000</option>
+                </datalist>    
+        </div>
         <?php
     }
 
@@ -126,112 +125,110 @@
         */
         get_post_meta( $post->ID, self::META_CHAMBER, true );
         ?>
-        
-            <div class="control-group-chamber">
-                <label class="control-chamber control-radio-chamber" for="oneChamber">
-                    1
-                        <input type="radio"  id="oneChamber" name="<?= self::META_CHAMBER ?>" value="1" checked/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="twoChamber">
-                    2
-                        <input type="radio"  id="twoChamber" name="<?= self::META_CHAMBER ?>" value="2"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="threeChamber">
-                    3
-                        <input type="radio"  id="threeChamber" name="<?= self::META_CHAMBER ?>" value="3"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="fourChamber">
-                    4
-                        <input type="radio"  id="fourChamber" name="<?= self::META_CHAMBER ?>" value="4"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-            </div>
-                <label class="control-chamber control-radio-chamber" for="fiveChamber">
-                    5
-                        <input type="radio"  id="fiveChamber" name="<?= self::META_CHAMBER ?>" value="5"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="sixChamber">
-                    6
-                        <input type="radio"  id="sixChamber" name="<?= self::META_CHAMBER ?>" value="6"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="sevenChamber">
-                    7
-                        <input type="radio"  id="sevenChamber" name="<?= self::META_CHAMBER ?>" value="7"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
-                <label class="control-chamber control-radio-chamber" for="heightChamber">
-                    8
-                        <input type="radio"  id="heightChamber" name="<?= self::META_CHAMBER ?>" value="8"/>
-                    <div class="control_indicator_chamber"></div>
-                </label>
+        <div class="control-group-chamber">
+            <label class="control-chamber control-radio-chamber" for="oneChamber">
+                1
+                    <input type="radio"  id="oneChamber" name="<?= self::META_CHAMBER ?>" value="1" checked/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="twoChamber">
+                2
+                    <input type="radio"  id="twoChamber" name="<?= self::META_CHAMBER ?>" value="2"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="threeChamber">
+                3
+                    <input type="radio"  id="threeChamber" name="<?= self::META_CHAMBER ?>" value="3"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="fourChamber">
+                4
+                    <input type="radio"  id="fourChamber" name="<?= self::META_CHAMBER ?>" value="4"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+        </div>
+            <label class="control-chamber control-radio-chamber" for="fiveChamber">
+                5
+                    <input type="radio"  id="fiveChamber" name="<?= self::META_CHAMBER ?>" value="5"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="sixChamber">
+                6
+                    <input type="radio"  id="sixChamber" name="<?= self::META_CHAMBER ?>" value="6"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="sevenChamber">
+                7
+                    <input type="radio"  id="sevenChamber" name="<?= self::META_CHAMBER ?>" value="7"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
+            <label class="control-chamber control-radio-chamber" for="heightChamber">
+                8
+                    <input type="radio"  id="heightChamber" name="<?= self::META_CHAMBER ?>" value="8"/>
+                <div class="control_indicator_chamber"></div>
+            </label>
         <?php
      }
 
     public static function render_bath($post) {
         get_post_meta( $post->ID, self::META_BATH, true );
         ?>
-            <div class="control-group">
-                <label class="control control-radio" for="oneBath">
-                    1
-                        <input type="radio"  id="oneBath" name="<?= self::META_BATH ?>" value="1" checked/>
-                    <div class="control_indicator"></div>
-                </label>
-                <label class="control control-radio" for="twoBath">
-                    2
-                        <input type="radio" id="twoBath" name="<?= self::META_BATH ?>" value="2" />
-                    <div class="control_indicator"></div>
-                </label>
-                <label class="control control-radio" for="threeBath">
-                    3
-                        <input type="radio" id="threeBath" name="<?= self::META_BATH ?>" value="3" />
-                    <div class="control_indicator"></div>
-                </label>
-            </div>
-                <label class="control control-radio" for="fourBath">
-                    4
-                        <input type="radio"  id="fourBath" name="<?= self::META_BATH ?>" value="4"/>
-                    <div class="control_indicator"></div>
-                </label>
-                <label class="control control-radio" for="fiveBath">
-                    5
-                        <input type="radio" id="fiveBath" name="<?= self::META_BATH ?>" value="5" />
-                    <div class="control_indicator"></div>
-                </label>
-                <label class="control control-radio" for="sixBath">
-                    6
-                        <input type="radio" id="sixBath" name="<?= self::META_BATH ?>" value="6" />
-                    <div class="control_indicator"></div>
-                </label>
+        <div class="control-group">
+            <label class="control control-radio" for="oneBath">
+                1
+                    <input type="radio"  id="oneBath" name="<?= self::META_BATH ?>" value="1" checked/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio" for="twoBath">
+                2
+                    <input type="radio" id="twoBath" name="<?= self::META_BATH ?>" value="2" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio" for="threeBath">
+                3
+                    <input type="radio" id="threeBath" name="<?= self::META_BATH ?>" value="3" />
+                <div class="control_indicator"></div>
+            </label>
+        </div>
+            <label class="control control-radio" for="fourBath">
+                4
+                    <input type="radio"  id="fourBath" name="<?= self::META_BATH ?>" value="4"/>
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio" for="fiveBath">
+                5
+                    <input type="radio" id="fiveBath" name="<?= self::META_BATH ?>" value="5" />
+                <div class="control_indicator"></div>
+            </label>
+            <label class="control control-radio" for="sixBath">
+                6
+                    <input type="radio" id="sixBath" name="<?= self::META_BATH ?>" value="6" />
+                <div class="control_indicator"></div>
+            </label>
         <?php
     }
 
     public static function render_place($post) {
         get_post_meta( $post->ID, self::META_PLACE, true );
         ?>
-            <div class="control-group">
-                <label class="control-place control-radio-place" for="twoFour">2 à 4
-                        <input type="radio"  id="twoFour" name="<?= self::META_PLACE ?>" value="2 à 4" checked/>
-                    <div class="control_indicator_place"></div>
-                </label>
-                <label class="control-place control-radio-place" for="threeFour">3 à 4
-                        <input type="radio"  id="threeFour" name="<?= self::META_PLACE ?>" value="3 à 4"/>
-                    <div class="control_indicator_place"></div>
-                </label>
-                <label class="control-place control-radio-place" for="threeSix">3 à 6
-                        <input type="radio"  id="threeSix" name="<?= self::META_PLACE ?>" value="3 à 6"/>
-                    <div class="control_indicator_place"></div>
-                </label>
-                <label class="control-place control-radio-place" for="sixTwelve">6 à 12
-                        <input type="radio"  id="sixTwelve" name="<?= self::META_PLACE ?>" value="6 à 12"/>
-                    <div class="control_indicator_place"></div>
-                </label>
-            
-            </div>
+        <div class="control-group">
+            <label class="control-place control-radio-place" for="twoFour">2 à 4
+                    <input type="radio"  id="twoFour" name="<?= self::META_PLACE ?>" value="2 à 4" checked/>
+                <div class="control_indicator_place"></div>
+            </label>
+            <label class="control-place control-radio-place" for="threeFour">3 à 4
+                    <input type="radio"  id="threeFour" name="<?= self::META_PLACE ?>" value="3 à 4"/>
+                <div class="control_indicator_place"></div>
+            </label>
+            <label class="control-place control-radio-place" for="threeSix">3 à 6
+                    <input type="radio"  id="threeSix" name="<?= self::META_PLACE ?>" value="3 à 6"/>
+                <div class="control_indicator_place"></div>
+            </label>
+            <label class="control-place control-radio-place" for="sixTwelve">6 à 12
+                    <input type="radio"  id="sixTwelve" name="<?= self::META_PLACE ?>" value="6 à 12"/>
+                <div class="control_indicator_place"></div>
+            </label>
+        </div>
         <?php
     }
 

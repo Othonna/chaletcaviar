@@ -1,5 +1,11 @@
 <?php
 require dirname(__DIR__, 3) . '/vendor/autoload.php';
+/*
+* Metaboxes link to folder metaboxes
+*/
+require_once('metaboxes/metaboxes.php');
+MetaBoxes::register(); 
+
 
 function load_scripts() {
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0', 'all');
@@ -12,12 +18,13 @@ function admin_scripts() {
 }
 
 function chaletcaviar_register_assets () {
-  
   wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
   wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', [], null, true);
-  wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js');
+  wp_register_script('jquery', 'https://code.jquery.com/jquery-3.3.1.js');
+  wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js');
   wp_enqueue_style('bootstrap');
   wp_enqueue_script('bootstrap');
+  wp_enqueue_script('jquery');
   wp_enqueue_script('gsap');
 }
 
@@ -71,8 +78,3 @@ add_filter('nav_menu_css_class', 'chaletcaviar_menu_class');
 add_filter('nav_menu_link_attributes', 'chaletcaviar_menu_link_class');
 
 
-/*
-* Metaboxes link to folder metaboxes
-*/
-require_once('metaboxes/metaboxes.php');
-MetaBoxes::register(); 
