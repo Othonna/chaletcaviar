@@ -1,6 +1,5 @@
 <?php
-
-class MetaBoxes {
+    class MetaBoxes {
 
     const META_PRICE = 'chaletcaviar_price';
     const META_METER = 'chaletcaviar_meter';
@@ -232,75 +231,477 @@ class MetaBoxes {
         * HTML for our Custom Content 
         * @return void
         */
+
         $value = get_post_meta( $post->ID, self::META_CHAMBER, true );
         ?>
-            <div>
-                <input type="radio" id="oneChamber" name="<?= self::META_CHAMBER ?>" value="1" checked>
-                <label for="oneChamber">1</label>
-          
-                <input type="radio" id="twoChamber" name="<?= self::META_CHAMBER ?>" value="2">
-                <label for="twoChamber">2</label>
-         
-                <input type="radio" id="threeChamber" name="<?= self::META_CHAMBER ?>" value="3">
-                <label for="threeChamber">3</label>
-       
-                <input type="radio" id="forChamber" name="<?= self::META_CHAMBER ?>" value="">
-                <label for="forChamber">4</label>
-           
-                <input type="radio" id="fiveChamber" name="<?= self::META_CHAMBER ?>" value="5">
-                <label for="fiveChamber">5</label>
-         
-                <input type="radio" id="sixChamber" name="<?= self::META_CHAMBER ?>" value="6">
-                <label for="sixChamber">6</label>
-                <input type="radio" id="sevenChamber" name="<?= self::META_CHAMBER ?>" value="7">
-                <label for="sevenChamber">7</label>
-                <input type="radio" id="heightChamber" name="<?= self::META_CHAMBER ?>" value="8">
-                <label for="heightChamber">8</label>
+        
+    <style>
+        /********************* Chamber CSS ***********************/
+        .control-chamber {
+            font-family: arial;
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 5px;
+            padding-top: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+            .control-chamber input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+        .control_indicator_chamber {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #e6e6e6;
+            border: 0px solid #000000;
+            border-radius: undefinedpx;
+        }
+        .control-chamber:hover input ~ .control_indicator_chamber,
+        .control-chamber input:focus ~ .control_indicator_chamber {
+            background: #cccccc;
+        }
+
+        .control-chamber input:checked ~ .control_indicator_chamber {
+            background: #2aa1c0;
+        }
+        .control-chamber:hover input:not([disabled]):checked ~ .control_indicator_chamber,
+        .control-chamber input:checked:focus ~ .control_indicator_chamber {
+            background: #0e6647;
+        }
+        .control-chamber input:disabled ~ .control_indicator_chamber {
+            background: #e6e6e6;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .control_indicator_chamber:after {
+            box-sizing: unset;
+            content: '';
+            position: absolute;
+            display: none;
+        }
+        .control-chamber input:checked ~ .control_indicator_chamber:after {
+            display: block;
+        }
+        .control-radio-chamber .control_indicator_chamber {
+            border-radius: 50%;
+        }
+
+        .control-radio-chamber .control_indicator_chamber:after {
+            left: 7px;
+            top: 7px;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #ffffff;
+            transition: background 250ms;
+        }
+        .control-radio-chamber input:disabled ~ .control_indicator_chamber:after {
+            background: #7b7b7b;
+        }.control-radio-chamber .control_indicator_chamber::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-left: -1.3rem;
+            margin-top: -1.3rem;
+            background: #2aa1c0;
+            border-radius: 3rem;
+            opacity: 0.6;
+            z-index: 99999;
+            transform: scale(0);
+        }
+        @keyframes s-ripple {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            20% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.01;
+                transform: scale(1);
+            }
+        }
+        @keyframes s-ripple-dup {
+        0% {
+            transform: scale(0);
+            }
+        30% {
+                transform: scale(1);
+            }
+            60% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+        .control-radio-chamber input + .control_indicator_chamber::before {
+            animation: s-ripple 250ms ease-out;
+        }
+        .control-radio-chamber input:checked + .control_indicator_chamber::before {
+            animation-name: s-ripple-dup;
+        }
+        /****************** END Chamber CSS *********************/
+    </style>
+            <div class="control-group-chamber">
+                <label class="control-chamber control-radio-chamber" for="oneChamber">
+                    1
+                        <input type="radio"  id="oneChamber" name="<?= self::META_CHAMBER ?>" value="1" checked/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="twoChamber">
+                    2
+                        <input type="radio"  id="twoChamber" name="<?= self::META_CHAMBER ?>" value="2"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="threeChamber">
+                    3
+                        <input type="radio"  id="threeChamber" name="<?= self::META_CHAMBER ?>" value="3"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="fourChamber">
+                    4
+                        <input type="radio"  id="fourChamber" name="<?= self::META_CHAMBER ?>" value="4"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
             </div>
+                <label class="control-chamber control-radio-chamber" for="fiveChamber">
+                    5
+                        <input type="radio"  id="fiveChamber" name="<?= self::META_CHAMBER ?>" value="5"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="sixChamber">
+                    6
+                        <input type="radio"  id="sixChamber" name="<?= self::META_CHAMBER ?>" value="6"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="sevenChamber">
+                    7
+                        <input type="radio"  id="sevenChamber" name="<?= self::META_CHAMBER ?>" value="7"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
+                <label class="control-chamber control-radio-chamber" for="heightChamber">
+                    8
+                        <input type="radio"  id="heightChamber" name="<?= self::META_CHAMBER ?>" value="8"/>
+                    <div class="control_indicator_chamber"></div>
+                </label>
         <?php
      }
 
     public static function render_bath($post) {
         $value = get_post_meta( $post->ID, self::META_BATH, true );
         ?>
-            <div>
-                <input type="radio" id="oneBath" name="<?= self::META_BATH ?>" value="1" checked>
-                <label for="oneBath">1</label>
-          
-                <input type="radio" id="twoBath" name="<?= self::META_BATH ?>" value="2">
-                <label for="twoBath">2</label>
-         
-                <input type="radio" id="threeBath" name="<?= self::META_BATH ?>" value="3">
-                <label for="threeBath">3</label>
-          
-                <input type="radio" id="forBath" name="<?= self::META_BATH ?>" value="4">
-                <label for="forBath">4</label>
-          
-                <input type="radio" id="fiveBath" name="<?= self::META_BATH ?>" value="5">
-                <label for="fiveBath">5</label>
-           
-                <input type="radio" id="sixBath" name="<?= self::META_BATH ?>" value="6">
-                <label for="sixBath">6</label>
-            </div>
+        <style>
+            /****************** Bathroom CSS *********************/
+            .control {
+                font-family: arial;
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 5px;
+                padding-top: 3px;
+                cursor: pointer;
+                font-size: 12px;
+            }
+            .control input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+            .control_indicator {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background: #e6e6e6;
+                border: 0px solid #000000;
+                border-radius: undefinedpx;
+            }
+            .control:hover input ~ .control_indicator,
+            .control input:focus ~ .control_indicator {
+                background: #cccccc;
+            }
+
+            .control input:checked ~ .control_indicator {
+                background: #2aa1c0;
+            }
+            .control:hover input:not([disabled]):checked ~ .control_indicator,
+            .control input:checked:focus ~ .control_indicator {
+                background: #0e6647;
+            }
+            .control input:disabled ~ .control_indicator {
+                background: #e6e6e6;
+                opacity: 0.6;
+                pointer-events: none;
+            }
+            .control_indicator:after {
+                box-sizing: unset;
+                content: '';
+                position: absolute;
+                display: none;
+            }
+            .control input:checked ~ .control_indicator:after {
+                display: block;
+            }
+            .control-radio .control_indicator {
+                border-radius: 50%;
+            }
+
+            .control-radio .control_indicator:after {
+                left: 7px;
+                top: 7px;
+                height: 6px;
+                width: 6px;
+                border-radius: 50%;
+                background: #ffffff;
+                transition: background 250ms;
+            }
+            .control-radio input:disabled ~ .control_indicator:after {
+                background: #7b7b7b;
+            }.control-radio .control_indicator::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 4.5rem;
+                height: 4.5rem;
+                margin-left: -1.3rem;
+                margin-top: -1.3rem;
+                background: #2aa1c0;
+                border-radius: 3rem;
+                opacity: 0.6;
+                z-index: 99999;
+                transform: scale(0);
+            }
+            @keyframes s-ripple {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                20% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0.01;
+                    transform: scale(1);
+                }
+            }
+            @keyframes s-ripple-dup {
+            0% {
+                transform: scale(0);
+                }
+            30% {
+                    transform: scale(1);
+                }
+                60% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+            .control-radio input + .control_indicator::before {
+                animation: s-ripple 250ms ease-out;
+            }
+            .control-radio input:checked + .control_indicator::before {
+                animation-name: s-ripple-dup;
+            }
+            /****************** END Bathroom CSS *********************/
+        </style>
+            <div class="control-group">
+                <label class="control control-radio" for="oneBath">
+                    1
+                        <input type="radio"  id="oneBath" name="<?= self::META_BATH ?>" value="1" checked/>
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio" for="twoBath">
+                    2
+                        <input type="radio" id="twoBath" name="<?= self::META_BATH ?>" value="2" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio" for="threeBath">
+                    3
+                        <input type="radio" id="threeBath" name="<?= self::META_BATH ?>" value="3" />
+                    <div class="control_indicator"></div>
+                </label>
+                </div>
+                <label class="control control-radio" for="fourBath">
+                    4
+                        <input type="radio"  id="fourBath" name="<?= self::META_BATH ?>" value="4"/>
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio" for="fiveBath">
+                    5
+                        <input type="radio" id="fiveBath" name="<?= self::META_BATH ?>" value="5" />
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio" for="sixBath">
+                    6
+                        <input type="radio" id="sixBath" name="<?= self::META_BATH ?>" value="6" />
+                    <div class="control_indicator"></div>
+                </label>
+            
         <?php
     }
 
     public static function render_place($post) {
         $value = get_post_meta( $post->ID, self::META_PLACE, true );
         ?>
-            <div>
-                <input type="radio" id="twoFour" name="<?= self::META_PLACE ?>" value="2 à 4" checked>
-                <label for="twoFour">2 à 4</label>
 
-                <input type="radio" id="fourHeight" name="<?= self::META_PLACE ?>" value="4 à 8">
-                <label for="fourHeight">4 à 8</label>
+<style>
+            /****************** Bathroom CSS *********************/
+            .control-place {
+                font-family: arial;
+                display: block;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 5px;
+                padding-top: 3px;
+                cursor: pointer;
+                font-size: 12px;
+            }
+            .control-place input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+            .control_indicator_place {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background: #e6e6e6;
+                border: 0px solid #000000;
+                border-radius: undefinedpx;
+            }
+            .control-place:hover input ~ .ccontrol_indicator_place,
+            .control-place input:focus ~ .control_indicator_place {
+                background: #cccccc;
+            }
 
-                <input type="radio" id="threeSix" name="<?= self::META_PLACE ?>" value="3 à 6">
-                <label for="threeSix">3 à 6</label>
+            .control-place input:checked ~ .control_indicator_place {
+                background: #2aa1c0;
+            }
+            .control-place:hover input:not([disabled]):checked ~ .control_indicator_place,
+            .control-place input:checked:focus ~ .control_indicator_place {
+                background: #0e6647;
+            }
+            .control-place input:disabled ~ .control_indicator_place {
+                background: #e6e6e6;
+                opacity: 0.6;
+                pointer-events: none;
+            }
+            .control_indicator_place:after {
+                box-sizing: unset;
+                content: '';
+                position: absolute;
+                display: none;
+            }
+            .control-place input:checked ~ .control_indicator_place:after {
+                display: block;
+            }
+            .control-radio-place .control_indicator_place {
+                border-radius: 50%;
+            }
 
-                <input type="radio" id="sixTwelve" name="<?= self::META_PLACE ?>" value="6 à 12">
-                <label for="sixTwelve">6 à 12</label>
-                
+            .control-radio-place .control_indicator_place:after {
+                left: 7px;
+                top: 7px;
+                height: 6px;
+                width: 6px;
+                border-radius: 50%;
+                background: #ffffff;
+                transition: background 250ms;
+            }
+            .control-radio-place input:disabled ~ .control_indicator_place:after {
+                background: #7b7b7b;
+            }.control-radio-place .control_indicator_place::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 4.5rem;
+                height: 4.5rem;
+                margin-left: -1.3rem;
+                margin-top: -1.3rem;
+                background: #2aa1c0;
+                border-radius: 3rem;
+                opacity: 0.6;
+                z-index: 99999;
+                transform: scale(0);
+            }
+            @keyframes s-ripple {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                20% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0.01;
+                    transform: scale(1);
+                }
+            }
+            @keyframes s-ripple-dup {
+            0% {
+                transform: scale(0);
+                }
+            30% {
+                    transform: scale(1);
+                }
+                60% {
+                    transform: scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+            .control-radio-place input + .control_indicator_place::before {
+                animation: s-ripple 250ms ease-out;
+            }
+            .control-radio-place input:checked + .control_indicator_place::before {
+                animation-name: s-ripple-dup;
+            }
+            /****************** END Bathroom CSS *********************/
+        </style>
+
+            <div class="control-group">
+                <label class="control-place control-radio-place" for="twoFour">2 à 4
+                        <input type="radio"  id="twoFour" name="<?= self::META_PLACE ?>" value="2 à 4" checked/>
+                    <div class="control_indicator_place"></div>
+                </label>
+                <label class="control-place control-radio-place" for="threeFour">3 à 4
+                        <input type="radio"  id="threeFour" name="<?= self::META_PLACE ?>" value="3 à 4"/>
+                    <div class="control_indicator_place"></div>
+                </label>
+                <label class="control-place control-radio-place" for="threeSix">3 à 6
+                        <input type="radio"  id="threeSix" name="<?= self::META_PLACE ?>" value="3 à 6"/>
+                    <div class="control_indicator_place"></div>
+                </label>
+                <label class="control-place control-radio-place" for="sixTwelve">6 à 12
+                        <input type="radio"  id="sixTwelve" name="<?= self::META_PLACE ?>" value="6 à 12"/>
+                    <div class="control_indicator_place"></div>
+                </label>
+            
             </div>
         <?php
     }

@@ -15,7 +15,7 @@
                   <?php echo $meter ?> m²
                   <?php echo $chamber ?> Chambres
                   <?php echo $bathroom ?> Salles de bain
-                  Prix : <?php echo $price ?> €
+                  Prix : <span class="font-weight-bold"><?php echo $price ?> €</span>
               </div>
       <?php endwhile; endif; ?>
   </div>

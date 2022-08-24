@@ -16,7 +16,7 @@
                  <?php echo $place ?> places
                  <?php echo $chamber ?> Chambres
                  <?php echo $bathroom ?> Salles de bain
-                 Prix de la semaine : <?php echo $price ?> €
+                 Prix de la semaine : <span class="font-weight-bold"><?php echo $price ?> €</span>
              </div>
               
       <?php endwhile; endif; ?>

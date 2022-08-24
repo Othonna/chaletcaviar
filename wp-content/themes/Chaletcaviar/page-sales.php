@@ -25,11 +25,11 @@ get_header() ?>
                 <div class="card-body">
                     <h5 class="card-title"><?php the_title() ?></h5>
                     <p class="card-text"><?php the_content() ?></p>
-                    <div>
-                        <?php echo $meter ?> m²
-                        <?php echo $chamber ?> Chambres
-                        <?php echo $bathroom ?> Salles de bain
-                        Prix : <?php echo $price ?> €
+                    <div class="flex-column">
+                       <div><?php echo $meter ?> m²</div> 
+                        <div><?php echo $chamber ?> Chambres</div>
+                        <div><?php echo $bathroom ?> Salles de bain</div>
+                        <div>Prix : <span class="fw-bold"><?php echo $price ?> €</span></div>
                     </div>
                     <a href="<?php the_permalink() ?>" class="card-link">Voir plus</a>
                 </div>
