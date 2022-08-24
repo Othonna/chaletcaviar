@@ -1,0 +1,1 @@
+function updateTextInput(val) { document.getElementById('textRangeInput').value=val; }
