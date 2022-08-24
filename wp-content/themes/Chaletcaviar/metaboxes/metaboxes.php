@@ -4,6 +4,7 @@ class MetaBoxes {
 
     const META_PRICE = 'chaletcaviar_price';
     const META_METER = 'chaletcaviar_meter';
+    const META_PLACE = 'chaletcaviar_place';
     const META_CHAMBER = 'chaletcaviar_chamber';
     const META_BATH = 'chaletcaviar_bath';
 
@@ -37,8 +38,18 @@ class MetaBoxes {
                 'side'                          
             );
         }
+        $screens = array('location');
+        foreach ( $screens as $screen ) {
+            add_meta_box(
+                self::META_PLACE,            
+                'Nombre de places',           
+                [self::class, 'render_place'], 
+                $screen,                       
+                'side'                          
+            );
+        }
 
-        $screens = array('location', 'sale');
+        $screens = array('sale');
         foreach ( $screens as $screen ) {
             add_meta_box(
                 self::META_METER,               
@@ -212,7 +223,7 @@ class MetaBoxes {
         */
         $value = get_post_meta( $post->ID, self::META_METER, true );
         ?>
-         <input method="post" id="<?= self::META_METER ?>"  type="number" name="<?= self::META_METER ?>"> m²</input>
+         <input method="post" id="<?= self::META_METER ?>" value="10" type="number" name="<?= self::META_METER ?>">m²</input>
        <?php
     }
 
@@ -241,6 +252,10 @@ class MetaBoxes {
          
                 <input type="radio" id="sixChamber" name="<?= self::META_CHAMBER ?>" value="6">
                 <label for="sixChamber">6</label>
+                <input type="radio" id="sevenChamber" name="<?= self::META_CHAMBER ?>" value="7">
+                <label for="sevenChamber">7</label>
+                <input type="radio" id="heightChamber" name="<?= self::META_CHAMBER ?>" value="8">
+                <label for="heightChamber">8</label>
             </div>
         <?php
      }
@@ -266,6 +281,26 @@ class MetaBoxes {
            
                 <input type="radio" id="sixBath" name="<?= self::META_BATH ?>" value="6">
                 <label for="sixBath">6</label>
+            </div>
+        <?php
+    }
+
+    public static function render_place($post) {
+        $value = get_post_meta( $post->ID, self::META_PLACE, true );
+        ?>
+            <div>
+                <input type="radio" id="twoFour" name="<?= self::META_PLACE ?>" value="2 à 4" checked>
+                <label for="twoFour">2 à 4</label>
+
+                <input type="radio" id="fourHeight" name="<?= self::META_PLACE ?>" value="4 à 8">
+                <label for="fourHeight">4 à 8</label>
+
+                <input type="radio" id="threeSix" name="<?= self::META_PLACE ?>" value="3 à 6">
+                <label for="threeSix">3 à 6</label>
+
+                <input type="radio" id="sixTwelve" name="<?= self::META_PLACE ?>" value="6 à 12">
+                <label for="sixTwelve">6 à 12</label>
+                
             </div>
         <?php
     }
@@ -302,6 +337,13 @@ class MetaBoxes {
                 $post_id,
                 self::META_BATH,
                 $_POST[self::META_BATH]
+            );
+        }
+        if (array_key_exists (self::META_PLACE, $_POST)) {
+            update_post_meta(
+                $post_id,
+                self::META_PLACE,
+                $_POST[self::META_PLACE]
             );
         }
     }
