@@ -1,4 +1,7 @@
-<?php get_header() /* Template Name: Locations Template */?>
+<?php   /* Template Name: Locations Template */
+        get_header(); 
+        require_once ('class/Navbar.php');?>
+
 <div class="container">
     <div class="row">
         <?php 

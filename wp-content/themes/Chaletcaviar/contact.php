@@ -1,8 +1,7 @@
-<?php include_once ('inc.php')?>
-<?php session_start(); ?>
-<?php get_header(); /* Template Name: Contact Page */ ?>
-
-<?php get_header(); /* Template Name: Contact Page */ ?>
+<?php   include_once ('inc.php');
+        session_start(); 
+        get_header(); /* Template Name: Contact Page */ 
+        require_once ('class/Navbar.php')?>
 
  <div class="container">
         <?php if(array_key_exists('errors', $_SESSION)): ?> 

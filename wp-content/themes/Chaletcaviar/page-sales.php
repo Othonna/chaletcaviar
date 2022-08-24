@@ -1,6 +1,6 @@
-<?php 
-/* Template Name: Sales Template */
-get_header() ?>
+<?php   /* Template Name: Sales Template */
+        get_header();
+        require_once ('class/Navbar.php'); ?>
 
 <div class="container">
     <div class="row">
