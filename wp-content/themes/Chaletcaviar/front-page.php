@@ -34,26 +34,11 @@
           <?php wp_nav_menu(['theme_location' => 'header', 
                                 'container' => false,
                                 'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0']) ?> 
-     <!-- < class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?php echo site_url('/') ?>">Accueil</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('/sale') ?>">A vendre</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('/location') ?>">A louer</a>
-            </li>
-        <  -->
+   
           </div>
         </div>
       </div>
     </nav>
-
-
-
-
-      
 
 <?php get_footer() ?>
 

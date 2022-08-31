@@ -30,6 +30,13 @@
 .navbar .nav-container li {
   list-style: none;
 }
+.wrapped-text-nav {
+  font-size: 3rem !important;
+  
+}
+.wrapped-text-nav:hover{
+  font-weight: normal !important;
+}
 
 .navbar .nav-container a {
   text-decoration: none;
@@ -38,9 +45,8 @@
   font-size: 3.2rem;
   padding: 0.7rem;
 }
-
 .navbar .nav-container a:hover{
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .nav-container {
@@ -97,6 +103,7 @@
 }
 
 .navbar .menu-items {
+  z-index: 2;
   background-color: #fecb0b;
   padding-top: 200px;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
@@ -119,12 +126,12 @@
   font-weight: 500;
 }
 
-.logo {
+.title {
+  float: none;
   position: absolute;
-  top: -13px;
-  right: 15px;
-  font-size: 1.2rem;
-  color: #101010;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -143,6 +150,45 @@
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo{
+.nav-container input[type="checkbox"]:checked ~ .title{
   display: none;
+}
+
+@media (min-width: 220px) {
+  .wrapped-text-nav {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .wrapped-text-nav {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .wrapped-text-nav {
+    font-size: 1.9rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapped-text-nav {
+    font-size: 2.4rem !important;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .wrapped-text-nav {
+    font-size: 3rem !important;
+  } 
+}
+
+
+@media (min-width: 1280px) {
+  .wrapped-text-nav {
+  font-size: 3.4rem !important;
+}
+
 }
