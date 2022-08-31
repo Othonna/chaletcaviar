@@ -1,5 +1,5 @@
 function fadeOut() {
-
+    
     TweenMax.to(".myBtn", 1, {
       y: -100,
       opacity: 0
@@ -44,7 +44,10 @@ function fadeOut() {
     TweenMax.from(".navbar", 2, {
       delay: 4.3,
       opacity: 0,
-      ease: Power2.easeInOut
+      ease: Power2.easeInOut,
+      display: 'block',
     });
     
-    }
+  }
+
+
