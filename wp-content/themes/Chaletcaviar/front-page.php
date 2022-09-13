@@ -47,12 +47,7 @@
 <!-- about section starts  -->
 <section class="about" id="about">
     <div class="video-container" data-aos="fade-right" data-aos-delay="300">
-        <video src="images/about-vid-1.mp4" muted autoplay loop class="video"></video>
-        <div class="controls">
-            <span class="control-btn" data-src="images/about-vid-1.mp4"></span>
-            <span class="control-btn" data-src="images/about-vid-2.mp4"></span>
-            <span class="control-btn" data-src="images/about-vid-3.mp4"></span>
-        </div>
+        <video src="/wp-content/uploads/2022/09/luxe.mp4" muted autoplay loop class="video"></video>
     </div>
     <div class="content" data-aos="fade-left" data-aos-delay="600">
         <span>Pourquoi nous choisir ?</span>
@@ -66,8 +61,8 @@
 <!-- destination section starts  -->
 <section class="destination" id="destination">
     <div class="heading">
-        <span>notre destination</span>
-        <h1>faire de la vôtre une destination</h1>
+        <span>nos chalets</span>
+        <h1>faire de notre métier votre destination</h1>
     </div>
     <div class="box-container">
     <?php 
@@ -95,37 +90,33 @@
 <!-- services section starts  -->
 
 <section class="services" id="services">
-
     <div class="heading">
         <span>nos services</span>
         <h1>d'innombrables expériences</h1>
     </div>
-
     <div class="box-container">
-
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
             <i class="fas fa-hiking"></i>
-            <h3>adventures</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            <h3>Randonnées</h3>
+            <p>Le virage vers un tourisme plus durable est en cours et des hébergements insolites de tout type sont maintenant disponibles dans la plupart des régions.</p>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
             <i class="fas fa-utensils"></i>
-            <h3>food & drinks</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            <h3>Restauration</h3>
+            <p>Les meilleures adresses de restaurants à prix compétitifs</p>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
             <i class="fas fa-wallet"></i>
-            <h3>affordable price</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            <h3>Prix abordable</h3>
+            <p>Grâce à notre agence et son moteur de recherche, beneficié des meilleurs tarifs</p>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
             <i class="fas fa-headset"></i>
-            <h3>24/7 support</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
+            <h3>24/7 service</h3>
+            <p>Une équipe d'experts à votre écoute et un catalogue de produits grand luxe</p>
         </div>
 
     </div>
@@ -137,64 +128,64 @@
 <!-- gallery section starts  -->
 <section class="gallery" id="gallery">
     <div class="heading">
-        <span>our gallery</span>
-        <h1>we record memories</h1>
+        <span>Nos destinations</span>
+        <h1>une envie, des souvenirs</h1>
     </div>
     
     <div class="box-container">
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="" alt="">
-            <span>travel spot</span>
-            <h3>iceland</h3>
+            <img src="/wp-content/uploads/2022/09/iceland-chalet.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Iceland</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="images/gallery-img-2.jpg" alt="">
-            <span>travel spot</span>
-            <h3>greenland</h3>
+            <img src="/wp-content/uploads/2022/09/canada-chalet.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Montréal - Canada</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="images/gallery-img-3.jpg" alt="">
-            <span>travel spot</span>
-            <h3>alaska</h3>
+            <img src="/wp-content/uploads/2022/09/chamonix.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Chamonix - France</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="images/gallery-img-4.jpg" alt="">
-            <span>travel spot</span>
-            <h3>thailand</h3>
+            <img src="/wp-content/uploads/2022/09/vosges.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Vosges - France</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="images/gallery-img-5.jpg" alt="">
-            <span>travel spot</span>
-            <h3>brazil</h3>
+            <img src="/wp-content/uploads/2022/09/ireland.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Zermatt - Suisse</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="images/gallery-img-6.jpg" alt="">
-            <span>travel spot</span>
-            <h3>maldive</h3>
+            <img src="/wp-content/uploads/2022/09/canada-chalet.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Ireland</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="images/gallery-img-7.jpg" alt="">
-            <span>travel spot</span>
-            <h3>iceland</h3>
+            <img src="/wp-content/uploads/2022/09/tyrol.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Tyrol - Autriche</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="images/gallery-img-8.jpg" alt="">
-            <span>travel spot</span>
-            <h3>alaska</h3>
+            <img src="/wp-content/uploads/2022/09/suede.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Suede</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="images/gallery-img-9.jpg" alt="">
-            <span>travel spot</span>
-            <h3>maldive</h3>
+            <img src="/wp-content/uploads/2022/09/norvege.jpg" alt="">
+            <span>lieu de voyage</span>
+            <h3>Norvège</h3>
         </div>
 
     </div>
@@ -209,7 +200,7 @@
 
     <div class="content" data-aos="fade-right" data-aos-delay="300">
         <span>testimonials</span>
-        <h3>good news from our clients</h3>
+        <h3>bonnes nouvelles de nos clients</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium corporis fugiat quae unde perspiciatis similique ab modi enim consequatur aperiam cumque distinctio facilis sit, debitis possimus asperiores non harum.</p>
     </div>
 
@@ -267,21 +258,21 @@
 <section class="blogs" id="blogs">
 
     <div class="heading">
-        <span>blogs & posts</span>
-        <h1>we untold stories</h1>
+        <span>Posts</span>
+        <h1>Nos nouvelles annonces</h1>
     </div>
 
     <div class="box-container">
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="images/blog-1.jpg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-9.jpeg" alt="">
             </div>
             <div class="content">
-                <a href="#" class="link">Life is a journey, not a destination</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!</p>
+                <a href="#" class="link">Le lac</a>
+                <p>Petit chalet lumineux, situé au bord du lac.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock"></i> 21st may, 2021</a>
+                    <a href="#"><i class="fas fa-clock"></i> 10 Septembre, 2022</a>
                     <a href="#"><i class="fas fa-user"></i> by admin</a>
                 </div>
             </div>
@@ -289,13 +280,13 @@
 
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <div class="image">
-                <img src="images/blog-2.jpg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-8.jpeg" alt="">
             </div>
             <div class="content">
-                <a href="#" class="link">Life is a journey, not a destination</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!</p>
+                <a href="#" class="link">Le familial</a>
+                <p>Grand chalet lumineux, idéal pour les familles nombreuses.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock"></i> 21st may, 2021</a>
+                    <a href="#"><i class="fas fa-clock"></i> 10 Septembre, 2022</a>
                     <a href="#"><i class="fas fa-user"></i> by admin</a>
                 </div>
             </div>
@@ -303,13 +294,13 @@
 
         <div class="box" data-aos="fade-up" data-aos-delay="450">
             <div class="image">
-                <img src="images/blog-3.jpg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-7.jpeg" alt="">
             </div>
             <div class="content">
-                <a href="#" class="link">Life is a journey, not a destination</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, natus!</p>
+                <a href="#" class="link">Le traditionnel</a>
+                <p>Très grand chalet. Grandes baies vitrées.</p>
                 <div class="icon">
-                    <a href="#"><i class="fas fa-clock"></i> 21st may, 2021</a>
+                    <a href="#"><i class="fas fa-clock"></i> 10 Septembre, 2022</a>
                     <a href="#"><i class="fas fa-user"></i> by admin</a>
                 </div>
             </div>
