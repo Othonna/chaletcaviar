@@ -10,6 +10,7 @@ MetaBoxes::register();
 function load_scripts() {
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0', 'all');
   wp_enqueue_style('navbar', get_template_directory_uri() . '/assets/css/navbar.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('slider', get_template_directory_uri() . '/assets/css/slider.css', array(), '1.0.0', 'all');
   wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/js/navbar.js', array(), '1.0.0', true);
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0.0', true);
 }
@@ -21,15 +22,20 @@ function admin_scripts() {
 
 function chaletcaviar_register_assets () {
   wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+  wp_register_style('aoslib', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css');
+  wp_register_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  wp_register_script('aosjs', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js');
   wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', [], null, true);
   wp_register_script('jquerybox', 'https://code.jquery.com/jquery-3.3.1.js');
   wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js');
-  wp_register_script('fontawesome', 'https://use.fontawesome.com/87580ffc1e.js');
+  wp_enqueue_style('aoslib');
   wp_enqueue_style('bootstrap');
+  wp_enqueue_style('fontawesome');
   wp_enqueue_script('bootstrap');
+  wp_enqueue_script('aosjs');
   wp_enqueue_script('jquerybox');
   wp_enqueue_script('gsap');
-  wp_enqueue_script('fontawesome');
+  
 }
 
 function chaletcaviar_supports () {

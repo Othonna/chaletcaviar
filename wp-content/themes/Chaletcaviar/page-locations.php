@@ -34,11 +34,6 @@
                             <div><?php echo $bathroom ?> Salles de bain</div>
                             <div>Prix de la semaine : <span class="fw-bold"><?php echo $price ?> €</span></div>
                         </div>
-                
-                          
-                            
-                            
-                            
                             <a href="<?php echo get_permalink() ?>" class="card-link">Voir plus</a>
                         </div>
                     </div>

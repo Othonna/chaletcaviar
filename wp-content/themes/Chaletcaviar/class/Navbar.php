@@ -1,22 +1,7 @@
-<nav>
-    <div class="navbar">
-      <div class="container nav-container">
-          <input class="checkbox" type="checkbox" name="" id="" />
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div> 
-          
-          <div class="title">
-            <a class="wrapped-text-nav" aria-current="page" href="<?php echo site_url('/home') ?>">CHALET CAVIAR</a>
-          </div>
-     
-        <div class="menu-items">
-        <?php wp_nav_menu(['theme_location' => 'header', 
-                              'container' => false,
-                              'menu_class' => 'navbar-nav me-auto']) ?> 
-        </div>
-      </div>
-    </div>
+<?php get_header(); ?> 
+<nav class="navbar">
+    <a data-aos="zoom-in-left" data-aos-delay="300" href="<?php echo site_url('/') ?>">Accueil</a>
+    <a data-aos="zoom-in-left" data-aos-delay="450" href="<?php echo site_url('/locations') ?>">A louer</a>
+    <a data-aos="zoom-in-left" data-aos-delay="600" href="<?php echo site_url('/sales') ?>">A vendre</a>
+    <a data-aos="zoom-in-left" data-aos-delay="750" href="<?php echo site_url('/contact') ?>">Contact</a>
 </nav>
