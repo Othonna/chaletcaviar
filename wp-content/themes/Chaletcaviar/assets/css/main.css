@@ -15,20 +15,19 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 9rem;
 }
 
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 1rem;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #111;
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #fecb0b;
   border-radius: 5rem;
 }

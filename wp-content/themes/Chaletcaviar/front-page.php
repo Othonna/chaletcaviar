@@ -2,7 +2,7 @@
 
 <header class="header">
     <div id="menu-btn" class="fas fa-bars"></div>
-    <a data-aos="zoom-in-left" data-aos-delay="150" href="<?php echo site_url('/home') ?>" class="logo"> <i class="fas fa-paper-plane"></i>Chalet Caviar </a>
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="<?php echo site_url('/') ?>" class="logo"> <i class="fas fa-paper-plane"></i>Chalet Caviar </a>
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="<?php echo site_url('/') ?>">Accueil</a>
             <a data-aos="zoom-in-left" data-aos-delay="450" href="<?php echo site_url('/locations') ?>">A louer</a>
@@ -53,7 +53,7 @@
         <span>Pourquoi nous choisir ?</span>
         <h3>La majesté de la nature vous attend</h3>
         <p>Vous aimez la montagne, vous êtes passionnés par les sports d'hiver ou vous rêvez d'un cadre merveilleux pour vos vacances d'été?
-            En couple, en famille ou entre amis, Courchevel vous offre un vaste panel d'activités à partager avec vos proches.</p>
+            En couple, en famille ou entre amis, Chalet & Caviar vous offre un vaste panel d'activités à partager avec vos proches.</p>
     </div>
 </section>
 <!-- about section ends -->
@@ -62,7 +62,7 @@
 <section class="destination" id="destination">
     <div class="heading">
         <span>nos chalets</span>
-        <h1>faire de notre métier votre destination</h1>
+        <h1>faire de notre métier votre destination de rêve</h1>
     </div>
     <div class="box-container">
     <?php 
