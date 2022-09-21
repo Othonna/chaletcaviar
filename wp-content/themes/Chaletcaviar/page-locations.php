@@ -2,13 +2,12 @@
         get_header(); 
         require_once ('class/Navbar.php');?>
 
-<div class="container">
+<div class="container" style="margin-top:150px;">
     <div class="row">
         <?php 
             $locationpageEvents = new WP_Query(array(
                 'post_type' => 'location'
             ));
-            //dump($locationpageEvents);
             
             while($locationpageEvents->have_posts()) {
                     $locationpageEvents->the_post(); 
@@ -19,27 +18,33 @@
                     $bathroom = get_post_meta($post->ID, 'chaletcaviar_bath', true);  
                     ?>
 
-                <div class="col-sm-4">
-                    <?php //echo get_the_ID()?>
-                    <div class="card" style="width: 21rem;">
-                    <?php the_post_thumbnail('medium', ['class' => 'card-img-top', 'alt' => '', 'style' => 'height: auto']) ?>
-                        <img src="" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php the_title() ?></h5>
-                            <p class="card-text"><?php the_content() ?></p>
-                       
-                        <div class="flex-column">
-                            <div><?php echo $place ?> places</div>
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                   
+                    </div>
+
+                    <a class="card-action" href="#">Vendu</i></a>
+                    <div class="card-heading">
+                        <?php the_title() ?>
+                    </div>
+                    <div class="text-card">
+                        <?php the_content() ?>
+                    </div>
+                    <div class="text-card">
+                    <div class="flex-column">
+                        <div><?php echo $meter ?> m²</div> 
                             <div><?php echo $chamber ?> Chambres</div>
                             <div><?php echo $bathroom ?> Salles de bain</div>
-                            <div>Prix de la semaine : <span class="fw-bold"><?php echo $price ?> €</span></div>
-                        </div>
-                            <a href="<?php echo get_permalink() ?>" class="card-link">Voir plus</a>
+                            <div>Prix : <span class="fw-bold"><?php echo $price ?> €</span></div>
                         </div>
                     </div>
+                    <a href="#" class="button-card">Acheter</a>
                 </div>
-                <?php }
+            </div>
+        <?php }
         ?>
     </div>  
 </div>
+
 <?php get_footer() ?>

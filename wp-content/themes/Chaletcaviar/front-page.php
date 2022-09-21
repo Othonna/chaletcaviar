@@ -2,7 +2,8 @@
 
 <header class="header">
     <div id="menu-btn" class="fas fa-bars"></div>
-    <a data-aos="zoom-in-left" data-aos-delay="150" href="<?php echo site_url('/') ?>" class="logo"> <i class="fas fa-paper-plane"></i>Chalet Caviar </a>
+    
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="<?php echo site_url('/') ?>" class="logo"> <i class="fa-solid fa-house"></i>Chalet Caviar </a>
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="<?php echo site_url('/') ?>">Accueil</a>
             <a data-aos="zoom-in-left" data-aos-delay="450" href="<?php echo site_url('/locations') ?>">A louer</a>
@@ -118,11 +119,8 @@
             <h3>24/7 service</h3>
             <p>Une équipe d'experts à votre écoute et un catalogue de produits grand luxe</p>
         </div>
-
     </div>
-
 </section>
-
 <!-- services section ends -->
 
 <!-- gallery section starts  -->
@@ -131,85 +129,68 @@
         <span>Nos destinations</span>
         <h1>une envie, des souvenirs</h1>
     </div>
-    
     <div class="box-container">
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="/wp-content/uploads/2022/09/iceland-chalet.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/iceland-chalet-768x512.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Iceland</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="/wp-content/uploads/2022/09/canada-chalet.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/canada-chalet-768x512.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Montréal - Canada</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="/wp-content/uploads/2022/09/chamonix.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/chamonix-768x511.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Chamonix - France</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="/wp-content/uploads/2022/09/vosges.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/vosges-768x576.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Vosges - France</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="/wp-content/uploads/2022/09/ireland.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/ireland-768x512.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Zermatt - Suisse</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="/wp-content/uploads/2022/09/canada-chalet.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/canada-chalet-768x512.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Ireland</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <img src="/wp-content/uploads/2022/09/tyrol.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/tyrol-768x576.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Tyrol - Autriche</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <img src="/wp-content/uploads/2022/09/suede.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/suede-768x511.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Suede</h3>
         </div>
-
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <img src="/wp-content/uploads/2022/09/norvege.jpg" alt="">
+            <img src="/wp-content/uploads/2022/09/norvege-768x484.jpg" alt="">
             <span>lieu de voyage</span>
             <h3>Norvège</h3>
         </div>
-
     </div>
-
 </section>
-
 <!-- gallery section ends -->
 
 <!-- review section starts  -->
-
 <section class="review">
-
     <div class="content" data-aos="fade-right" data-aos-delay="300">
         <span>testimonials</span>
         <h3>bonnes nouvelles de nos clients</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium corporis fugiat quae unde perspiciatis similique ab modi enim consequatur aperiam cumque distinctio facilis sit, debitis possimus asperiores non harum.</p>
     </div>
-
     <div class="box-container" data-aos="fade-left" data-aos-delay="600">
-
         <div class="box">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ratione.</p>
             <div class="user">
-                <img src="/wp-content/uploads/2022/09/pic-1.png" alt="">
+                <img src="/wp-content/uploads/2022/09/pic-1-150x150.png" alt="">
                 <div class="info">
                     <h3>john deo</h3>
                     <span>designer</span>
@@ -219,7 +200,7 @@
         <div class="box">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ratione.</p>
             <div class="user">
-                <img src="/wp-content/uploads/2022/09/pic-2.png" alt="">
+                <img src="/wp-content/uploads/2022/09/pic-2-150x150.png" alt="">
                 <div class="info">
                     <h3>john deo</h3>
                     <span>designer</span>
@@ -229,7 +210,7 @@
         <div class="box">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ratione.</p>
             <div class="user">
-                <img src="/wp-content/uploads/2022/09/pic-3.png" alt="">
+                <img src="/wp-content/uploads/2022/09/pic-3-150x150.png" alt="">
                 <div class="info">
                     <h3>john deo</h3>
                     <span>designer</span>
@@ -239,34 +220,27 @@
         <div class="box">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ratione.</p>
             <div class="user">
-                <img src="/wp-content/uploads/2022/09/pic-4.png" alt="">
+                <img src="/wp-content/uploads/2022/09/pic-4-150x150.png" alt="">
                 <div class="info">
                     <h3>john deo</h3>
                     <span>designer</span>
                 </div>
             </div>
         </div>
-
     </div>
-
 </section>
-
 <!-- review section ends -->
 
 <!-- blogs section starts  -->
-
 <section class="blogs" id="blogs">
-
     <div class="heading">
         <span>Posts</span>
         <h1>Nos nouvelles annonces</h1>
     </div>
-
     <div class="box-container">
-
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="/wp-content/uploads/2022/07/Chalet-9.jpeg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-9-768x512.jpeg" alt="">
             </div>
             <div class="content">
                 <a href="#" class="link">Le lac</a>
@@ -277,10 +251,9 @@
                 </div>
             </div>
         </div>
-
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <div class="image">
-                <img src="/wp-content/uploads/2022/07/Chalet-8.jpeg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-8-768x512.jpeg" alt="">
             </div>
             <div class="content">
                 <a href="#" class="link">Le familial</a>
@@ -291,10 +264,9 @@
                 </div>
             </div>
         </div>
-
         <div class="box" data-aos="fade-up" data-aos-delay="450">
             <div class="image">
-                <img src="/wp-content/uploads/2022/07/Chalet-7.jpeg" alt="">
+                <img src="/wp-content/uploads/2022/07/Chalet-7-768x512.jpeg" alt="">
             </div>
             <div class="content">
                 <a href="#" class="link">Le traditionnel</a>
@@ -305,33 +277,25 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </section>
-
 <!-- blogs section ends -->
 
 <!-- banner section starts  -->
-
 <div class="banner">
-
     <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
         <span>commencez votre aventure</span>
         <h3>rejoignez nous dès maintenant</h3>
         <a href="#book-form" class="btn">réserver</a>
     </div>
-
 </div>
-
 <!-- banner section ends -->
 
 <!-- footer section starts  -->
-
 <section class="footer">
     <div class="box-container">
         <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <a href="#" class="logo"> <i class="fas fa-paper-plane"></i>Chalet & Caviar</a>
+            <a href="#" class="logo"> <i class="fa-solid fa-house"></i>Chalet & Caviar</a>
             <p>Agence de chalets de luxe</p>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>

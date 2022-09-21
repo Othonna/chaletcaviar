@@ -1,0 +1,71 @@
+a {
+    text-decoration: none;
+  }
+  .back-color {
+    background: #212529;
+  }
+  /* Card Styles */
+  
+  .card-sl {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+  }
+  
+  .card-action {
+    position: relative;
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+    z-index: 2;
+    color: #d4af37;
+    background: #212529;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 15px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card-action:hover {
+    color: #fff;
+    background: #d4af37;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .card-heading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background: #212529;
+    padding: 10px 15px;
+  }
+  
+  .text-card {
+    padding: 10px 15px;
+    background: #212529;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .button-card {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #d4af37;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .button-card:hover {
+    text-decoration: none;
+    background-color: #d4af37;
+    color: #fff;
+  
+  }
+  

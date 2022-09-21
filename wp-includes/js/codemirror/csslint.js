@@ -110,7 +110,7 @@ var Colors = module.exports = {
     gainsboro       :"#dcdcdc",
     ghostwhite      :"#f8f8ff",
     gold            :"#ffd700",
-    goldenrod       :"#daa520",
+    goldenrod       :"#d4af37",
     gray            :"#808080",
     grey            :"#808080",
     green           :"#008000",

@@ -4,13 +4,13 @@ class Form {
 
     private function input($type, $name, $label) {
         if($type == 'textarea'){
-            $input = "<textarea required name=\"$name\" class=\"form-control text-form\" id=\"form_$name\" placeholder=\"Ecrivez votre message.\" wrap=\"hard\"></textarea>";
+            $input = "<textarea required name=\"$name\" class=\"input-name text-gray-color\" id=\"form_$name\" placeholder=\"Ecrivez votre message.\" wrap=\"hard\"></textarea>";
         } else {
-            $input = "<input required name=\"$name\" class=\"form-control\" id=\"form_$name\" placeholder=\"Ecrivez votre $label\"></input>";
+            $input = "<input required name=\"$name\" class=\"input-name text-gray-color\" id=\"form_$name\" placeholder=\"Ecrivez votre $label\"></input>";
         }
         return 
         "<div class=\"form-group\">
-                <label for=\"form_$name\">$label</label>
+                <label class=\"text-gray-color\" for=\"form_$name\">$label</label>
                 $input
             </div>";
     }
@@ -29,6 +29,6 @@ class Form {
 
      public function submit($label) {
         return
-        '<button type="submit" class="btn btn-primary">' . $label . '</button';
+        '<button type="submit" class="input-name text-gray-color">' . $label . '</button';
      }
 } 
