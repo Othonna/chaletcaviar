@@ -2,7 +2,6 @@
 
 <header class="header">
     <div id="menu-btn" class="fas fa-bars"></div>
-    
     <a data-aos="zoom-in-left" data-aos-delay="150" href="<?php echo site_url('/') ?>" class="logo"> <i class="fa-solid fa-house"></i>Chalet Caviar </a>
         <nav class="navbar">
             <a data-aos="zoom-in-left" data-aos-delay="300" href="<?php echo site_url('/') ?>">Accueil</a>

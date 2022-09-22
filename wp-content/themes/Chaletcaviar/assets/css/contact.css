@@ -78,7 +78,7 @@ label{
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
-    color: #d4af37;
+    color: var(--main-yellow);
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;

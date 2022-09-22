@@ -23,7 +23,7 @@ a {
     margin-top: -25px;
     margin-right: 20px;
     z-index: 2;
-    color: #d4af37;
+    color: var(--main-yellow);
     background: #212529;
     border-radius: 100%;
     padding: 15px;
@@ -33,7 +33,7 @@ a {
   
   .card-action:hover {
     color: #fff;
-    background: #d4af37;
+    background: var(--main-yellow);
     animation: pulse 1.5s infinite;
   }
   
@@ -57,14 +57,14 @@ a {
     justify-content: center;
     padding: 10px 0;
     width: 100%;
-    background-color: #d4af37;
+    background-color: var(--main-yellow);
     color: #fff;
     border-radius: 0 0 8px 8px;
   }
   
   .button-card:hover {
     text-decoration: none;
-    background-color: #d4af37;
+    background-color: var(--main-yellow);
     color: #fff;
   
   }
