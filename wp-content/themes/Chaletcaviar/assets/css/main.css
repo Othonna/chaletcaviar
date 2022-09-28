@@ -3,6 +3,7 @@
   --main-yellow: #d4af37;
   --variant-black: #080710;
   --text-gray-color: #aaa;
+  --color-white: #fff;
 }
 .text-gray-color {
  color: var(--text-gray-color);
@@ -33,7 +34,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #080710;
+  background: var(--variant-black);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -242,7 +243,11 @@ section {
       -ms-flex: 1 1 15rem;
           flex: 1 1 15rem;
 }
-
+.text-card-home {
+  color: #fff;
+  display: flex;
+  font-size: medium;
+}
 .about {
   display: -webkit-box;
   display: -ms-flexbox;

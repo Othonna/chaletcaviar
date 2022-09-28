@@ -1,6 +1,7 @@
 <?php 
     function sales_post_types() {
         register_post_type('sale', array(
+        'supports' => array('title', 'editor','thumbnail'),
         'has_archive' => true,    
         'public' => true,
         'labels' => array(

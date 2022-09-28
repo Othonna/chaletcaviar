@@ -1,9 +1,4 @@
  <?php
-//echo 'page-post-contact.php';
-
-/* echo '<pre>';
-    var_dump($_POST);
-echo '</pre>'; */
 
 $errors = [];
 

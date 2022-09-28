@@ -6,18 +6,12 @@
     const META_PLACE = 'chaletcaviar_place';
     const META_CHAMBER = 'chaletcaviar_chamber';
     const META_BATH = 'chaletcaviar_bath';
-    const META_THUMBNAIL = '_thumbnail_id';
 
     public static function register () {
         add_action( 'add_meta_boxes', [self::class, 'add'] );
         add_action('save_post', [self::class, 'save']);
     }
 
-   /*  public static function post_thumbnail_meta_box( $post ) {
-        $thumbnail_id = get_post_meta( $post->ID, '_thumbnail_id', true );
-        echo _wp_post_thumbnail_html( $thumbnail_id, $post->ID );
-    } */
-    
     public static function add() {
         /*
         * Registering metaboxes
@@ -82,17 +76,6 @@
                 self::META_BATH,           
                 'Salle de bains',          
                 [self::class, 'render_bath'], 
-                $screen,                        
-                'side'                          
-            );
-        }
-
-        $screens = array('location', 'sale');
-        foreach ( $screens as $screen ) {
-            add_meta_box(
-                self::META_THUMBNAIL,           
-                'upload image',          
-                [self::class, 'render_thumbnail'], 
                 $screen,                        
                 'side'                          
             );
@@ -248,10 +231,6 @@
         </div>
         <?php
     }
-
-    public static function render_thumbnail($post) {
-       echo 'Hello world';
-   }
 
     public static function save($post_id) {
          /*

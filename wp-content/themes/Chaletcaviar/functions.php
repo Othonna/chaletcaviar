@@ -38,14 +38,14 @@ function chaletcaviar_register_assets () {
   wp_register_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
   wp_register_script('aosjs', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', [], null, true);
   wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', [], null, true);
-  wp_register_script('jquerybox', 'https://code.jquery.com/jquery-3.3.1.js');
+  // wp_register_script('jquerybox', 'https://code.jquery.com/jquery-3.3.1.js');
   // wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js');
   wp_enqueue_style('aoslib');
   wp_enqueue_style('bootstrap');
   wp_enqueue_style('fontawesome');
   wp_enqueue_script('bootstrap');
   wp_enqueue_script('aosjs');
-  wp_enqueue_script('jquerybox');
+  // wp_enqueue_script('jquerybox');
   // wp_enqueue_script('gsap');
   
 }

@@ -15,16 +15,17 @@
                     $price = get_post_meta($post->ID, 'chaletcaviar_price', true); 
                     $place = get_post_meta($post->ID, 'chaletcaviar_place', true);
                     $chamber = get_post_meta($post->ID, 'chaletcaviar_chamber', true); 
-                    $bathroom = get_post_meta($post->ID, 'chaletcaviar_bath', true);  
+                    $bathroom = get_post_meta($post->ID, 'chaletcaviar_bath', true); 
+                    $meter = get_post_meta($post->ID, 'chaletcaviar_meter', true); 
                     ?>
 
             <div class="col-md-3">
                 <div class="card-sl">
                     <div class="card-image">
-                    <?php the_post_thumbnail('medium', ['class' => 'card-image', 'alt' => '', 'style' => 'height: auto']) ?>
+                    <?php the_post_thumbnail('large', ['class' => 'image', 'alt' => '', 'style' => 'height: auto']) ?>
                     </div>
 
-                    <a class="card-action" href="#">Vendu</i></a>
+                    <a class="card-action" href="#">A vendre</i></a>
                     <div class="card-heading">
                         <?php the_title() ?>
                     </div>
@@ -32,8 +33,8 @@
                         <?php the_content() ?>
                     </div>
                     <div class="text-card">
-                    <div class="flex-column">
-                        <div><?php echo $meter ?> m²</div> 
+                        <div class="flex-column">
+                            <div><?php echo $meter ?> m²</div> 
                             <div><?php echo $chamber ?> Chambres</div>
                             <div><?php echo $bathroom ?> Salles de bain</div>
                             <div>Prix : <span class="fw-bold"><?php echo $price ?> €</span></div>

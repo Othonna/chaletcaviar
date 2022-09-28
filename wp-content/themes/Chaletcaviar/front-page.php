@@ -69,13 +69,23 @@
             $locationpageEvents = new WP_Query(array(
                 'post_type' => 'location'
             ));     
-            while($locationpageEvents->have_posts()) {
+            while($locationpageEvents->have_posts()) { 
                 $locationpageEvents->the_post();  
+                $price = get_post_meta($post->ID, 'chaletcaviar_price', true);
+                $chamber = get_post_meta($post->ID, 'chaletcaviar_chamber', true); 
+                $bathroom = get_post_meta($post->ID, 'chaletcaviar_bath', true); 
                 ?>
         <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <?php the_post_thumbnail('medium', ['class' => 'image', 'alt' => '', 'style' => 'height: auto']) ?>
+            </div>
+            <a class="card-action " href="#"><?php echo $price ?> €</a>
             <div class="content">
                 <h3><?php the_title() ?></h3>
-                <p class="card-text"><?php the_content() ?></p>
+                <div class='text-card-home flex-column'>
+                    <div><?php echo $chamber ?> Chambres</div>
+                    <div><?php echo $bathroom ?> Salles de bain</div>
+                </div>
                 <a href="<?php echo get_permalink() ?>">Voir plus<i class="fas fa-angle-right"></i></a>
             </div>
         </div>
