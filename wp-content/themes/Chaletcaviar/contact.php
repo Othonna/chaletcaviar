@@ -32,13 +32,19 @@
                  <textarea name="message" id="form_message" class="input-name" placeholder="Ecrivez votre message." wrap="hard"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
                  <button type="submit" class="btn-contact" value="Envoyer">Envoyer</button>
          </form>
-                
-            
+         <?php
+      
+         /* 
+          dump($_POST);
+        $message = $_POST['message'];
+        $headers = 'FROM: site@local.net';
 
+        wp_mail('janick.deneux@gmail.com', 'formulaire de contact', $message, $headers) */
+        ?>
 <?php 
 unset($_SESSION['inputs']);
 unset($_SESSION['success']);
 unset($_SESSION['errors']);
 ?>
- 
+
 <?php get_footer(); ?>

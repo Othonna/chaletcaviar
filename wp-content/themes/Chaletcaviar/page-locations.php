@@ -3,7 +3,7 @@
         require_once ('class/Navbar.php');?>
 
 <div class="container" style="margin-top:150px;">
-    <div class="row">
+    <div class="row card-anim">
         <?php 
             $locationpageEvents = new WP_Query(array(
                 'post_type' => 'location'
