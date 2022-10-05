@@ -304,7 +304,7 @@ gsap.from(".left-anim-footer", {
         toggleActions: "play none none none",
     },
     opacity: 0, 
-    x: -170,
+    x: -200,
     duration: 1.5
 });
 gsap.from(".right-anim-footer", {
@@ -315,7 +315,7 @@ gsap.from(".right-anim-footer", {
         toggleActions: "play none none none",
     },
     opacity: 0, 
-    x: 170,
+    x: 200,
     duration: 1.5
 });
 /****************** trigger banner end *******************/ 
@@ -323,8 +323,8 @@ gsap.from(".right-anim-footer", {
 /****************** Location page anim *******************/ 
 gsap.from(".card-anim", {
     opacity: 0, 
-    y: 190, 
-    duration: 1.5
+    y: 280, 
+    duration: 1.3
   });
 
   /****************** contact page anim *******************/ 

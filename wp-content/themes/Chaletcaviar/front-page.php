@@ -4,7 +4,7 @@
 
 <header class="header">
     <div id="menu-btn" class="fas fa-bars icon-nav"></div>
-    <a href="<?php echo site_url('/') ?>" class="logo logo-anim"> <i class="fa-solid fa-house"></i>Chalet Caviar </a>
+    <a href="<?php echo site_url('/') ?>" class="logo logo-anim">Chalet & Caviar </a>
         <nav class="navbar">
             <a class="accueil" href="<?php echo site_url('/') ?>">Accueil</a>
             <a class="alouer" href="<?php echo site_url('/locations') ?>">A louer</a>

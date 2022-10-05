@@ -61,7 +61,28 @@ label{
     font-size: 16px;
     font-weight: 500;
 }
-.input-name{
+::placeholder{
+    color: #e5e5e5;
+}
+
+.wpcf7-submit {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: var(--main-yellow);
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.wpcf7-submit:hover {
+    background-color: #d4af37;
+    color: #080710;
+}
+
+input[type="text"]
+{
     font-family:Arial, Helvetica, sans-serif;
     display: block;
     height: 50px;
@@ -73,21 +94,30 @@ label{
     font-size: 14px;
     font-weight: 300;
 }
-::placeholder{
-    color: #e5e5e5;
-}
-.btn-contact{
-    margin-top: 50px;
+input[type="email"]
+{
+    font-family:Arial, Helvetica, sans-serif;
+    display: block;
+    height: 50px;
     width: 100%;
-    background-color: #ffffff;
-    color: var(--main-yellow);
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
 }
-.btn-contact:hover {
-    background-color: #d4af37;
-    color: #080710;
+
+.wpcf7-textarea
+{
+    font-family:Arial, Helvetica, sans-serif;
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
 }

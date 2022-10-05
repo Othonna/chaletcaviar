@@ -64,86 +64,6 @@ section {
   color: #fff;
 }
 
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: var(--main-yellow);
-  border: 0.2rem solid var(--main-yellow);
-  border-radius: 5rem;
-  cursor: pointer;
-  background: none;
-}
-
-.btn:hover {
-  background: var(--main-yellow);
-  color: #111;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: #222;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1.5rem 9%;
-}
-
-.header .navbar a {
-  font-size: 1.7rem;
-  color: var(--text-gray-color);
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.header .navbar a:hover {
-  color: var(--main-yellow);
-}
-
-.header .btn {
-  margin-top: 0;
-}
-
-.logo {
-  font-size: 2.5rem;
-  color: var(--main-yellow);
-  font-weight: bolder;
-}
-.logo:hover {
-  font-size: 2.5rem;
-  color: var(--text-gray-color);
-  font-weight: bolder;
-}
-
-.logo:hover > i {
-  color: var(--main-yellow);
-  padding:4px;
-}
-
-.logo > i {
-  color: var(--text-gray-color);
-  padding: 4px;
-}
-
-
-#menu-btn {
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  display: none;
-}
-
 .home {
   margin: 0 auto;
   margin-top: 9rem;
@@ -760,39 +680,6 @@ text-transform: uppercase;
   }
   section {
     padding: 3rem 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #menu-btn {
-    display: inline-block;
-  }
-  .header .navbar {
-    position: absolute;
-    top: 99%;
-    left: 0;
-    right: 0;
-    background: #222;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  .header .navbar.active {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .header .navbar a {
-    margin: 2rem;
-    font-size: 2rem;
-    display: block;
-  }
-  .home {
-    margin-top: 10rem;
-  }
-  .home .content span {
-    font-size: 8vw;
-  }
-  .home .content h3 {
-    font-size: 9vw;
   }
 }
 
