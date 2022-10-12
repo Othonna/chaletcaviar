@@ -37,7 +37,7 @@
                             <div>Prix : <span class="fw-bold"><?php echo $price ?> €</span></div>
                         </div>
                     </div>
-                    <a href="#" class="button-card">Reserver</a>
+                    <a href="<?php echo get_permalink() ?>" class="button-card">Reserver</a>
                 </div>
             </div>
         <?php }

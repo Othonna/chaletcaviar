@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the WordPress - 6.0.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-06 12:40:10+0000\n"
+"PO-Revision-Date: 2022-10-10 07:57:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
 "Language: fr\n"
 "Project-Id-Version: WordPress - 6.0.x - Development - Administration\n"
 
@@ -33,6 +33,16 @@ msgstr "Europe/Paris"
 #, gp-priority: high
 msgid "Continue"
 msgstr "Continuer"
+
+#. translators: 1: WordPress version number, 2: Link to update WordPress
+#: wp-admin/about.php:439
+msgid "Important! Your version of WordPress (%1$s) will stop receiving security updates in the near future. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
+msgstr "Important ! Votre version de WordPress (%1$s) ne recevra bientôt plus aucune mise à jour de sécurité. Pour garder votre site sécurisé, veuillez <a href=\"%2$s\">mettre à jour vers la dernière version de WordPress</a>."
+
+#. translators: 1: WordPress version number, 2: Link to update WordPress
+#: wp-admin/about.php:436
+msgid "Important! Your version of WordPress (%1$s) is no longer supported, you will not receive any security updates for your website. To keep your site secure, please <a href=\"%2$s\">update to the latest version of WordPress</a>."
+msgstr "Important ! Votre version de WordPress (%1$s) n‘est plus prise en charge, vous ne recevrez aucune mise à jour de sécurité pour votre site. Pour garder votre site sécurisé, veuillez <a href=\"%2$s\">mettre à jour vers la dernière version de WordPress</a>."
 
 #: wp-admin/about.php:359
 msgid "https://make.wordpress.org/core/2022/05/03/wordpress-6-0-field-guide/"
@@ -8652,7 +8662,7 @@ msgstr "Certains de vos thèmes et extensions ont également des mises à jour d
 #: wp-admin/includes/class-wp-automatic-updater.php:822
 #: wp-admin/includes/class-wp-automatic-updater.php:1235
 msgid "If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help."
-msgstr "Si vous rencontrez des problèmes ou avez besoin d’assistance, les volontaires du forum d’entraide de https://wpfr.net/support devraient pouvoir vous aider."
+msgstr "Si vous rencontrez des problèmes ou avez besoin d’assistance, les volontaires du forum d’entraide de WPFR (https://wpfr.net/support) devraient pouvoir vous aider."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:828
 #: wp-admin/update-core.php:972

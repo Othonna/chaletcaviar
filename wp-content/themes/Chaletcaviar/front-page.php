@@ -309,7 +309,7 @@
 <section class="footer">
     <div class="box-container">
         <div class="box left-anim-footer">
-            <a href="#" class="logo"> <i class="fa-solid fa-house"></i>Chalet & Caviar</a>
+            <a href="#" class="logo"></i>Chalet & Caviar</a>
             <p>Agence de chalets de luxe</p>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>

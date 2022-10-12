@@ -4,6 +4,7 @@ require dirname(__DIR__, 3) . '/vendor/autoload.php';
 * Metaboxes link to folder metaboxes
 */
 require_once('metaboxes/metaboxes.php');
+
 MetaBoxes::register(); 
 
 function load_scripts() {
