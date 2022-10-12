@@ -49,7 +49,7 @@
 <!-- about section starts  -->
 <section class="about" id="about">
     <div class="video-container">
-        <video src="/wp-content/uploads/2022/09/luxe.mp4" muted autoplay loop class="video"></video>
+        <video src="/wp-content/uploads/2022/10/luxe.mp4" muted autoplay loop class="video"></video>
     </div>
     <div class="content content-text-video">
         <span>Pourquoi nous choisir ?</span>
