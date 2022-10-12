@@ -7,7 +7,5 @@
          </form>
          
 <?php get_footer(); 
-// chaletandcaviar@othonnarecords.com
-// WQx46Rk9An4r
 ?>
 
